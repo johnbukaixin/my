@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="css/main.css">
 <style type="text/css">
 .container {
-	background-image: url("images/bjsxt.jpg");
+	background-image: url("images/ds_u0.png");
 	background-size: 80% 80%;
 	background-repeat: no-repeat;
 	height: 450px;
