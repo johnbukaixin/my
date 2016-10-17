@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="ptlpc"
+  id="myeclipse.1476196266507"
+  context-root="/ptlpc"
+  j2ee-spec="6.0"
+  archive="ptlpc.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+
+.my-table {
+	font-size: 14px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.my-table .input1 {
+	display: none;
+}
+
+.my-table td.active input {
+	display: inline-block;
+	font-size: 14px;
+	width:60px;
+}
+
+.my-table td.active span {
+	display: none;
+}
