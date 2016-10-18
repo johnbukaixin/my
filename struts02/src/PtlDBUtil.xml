@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sxtConfig>
+	<database-type>mysql</database-type>
+
+	<database type="oracle">
+		<className>oracle.jdbc.driver.OracleDriver</className>
+		<url>jdbc:oracle:thin:@127.0.0.1:1521:orcl</url>
+		<user>scott</user>
+		<password>tiger</password>
+	</database>
+
+	<database type="mysql">
+		<className>com.mysql.jdbc.Driver</className>
+		<url>jdbc:mysql://localhost:3306/testbase?useUnicode=true&amp;characterEncoding=utf8</url>
+		<user>root</user>
+		<password>root</password>
+	</database>
+
+</sxtConfig>
+
+
+
+
