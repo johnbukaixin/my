@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+
+body {
+    background: #E4E4E4;
+    font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+    font-size: 12px;
+}
+
+.chat-box {
+    background: #fff;
+    overflow: hidden;
+    
+}
+
+.chat-box .chat-item {
+    background: #E4E4E4;
+    margin: 11px;
+    word-break: break-all;
+}
+.xianshi {
+
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+    border: 1px solid #9C9C9C;
+    padding: 8px;
+    outline: none;
+    resize: none;
+}
+
+
+.write  textarea {
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+    border: 1px solid #9C9C9C;
+    padding: 8px;
+    outline: none;
+    resize: none;
+}
+
+.write input[name="name"] {
+    width: 400px;
+    height: 40px;
+    padding-left: 11px;
+    outline: none;
+}
+
+
+.write input[type="submit"] {
+    display: block;
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+
