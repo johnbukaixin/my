@@ -33,13 +33,13 @@ public class Class1 implements Serializable{
 		this.num = num;
 	}
 	public Class1(String name, String manager, Integer num) {
-		
+		this.id=UUID.randomUUID().toString().substring(1, 10);   
 		this.name = name;
 		this.manager = manager;
 		this.num = num;
 	}
 	public Class1() {
-      this.id=UUID.randomUUID().toString().substring(1, 10);     		
+        		
 	}
 	@Override
 	public int hashCode() {
