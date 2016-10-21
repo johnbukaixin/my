@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+      "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping package="com.ptl.entity.user">
+
+    <class name="User" table="user">
+        <id name="id" column="id">
+            <generator class="native" />
+        </id>
+        <property name="uname" column="uname"></property>
+        <property name="pwd" column="pwd"></property>
+        <property name="gender" column="gender"></property>
+        <property name="birthday" column="birthday"></property>
+    </class>
+    
+</hibernate-mapping>

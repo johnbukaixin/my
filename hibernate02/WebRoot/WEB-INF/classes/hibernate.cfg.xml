@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql:///testbase</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root</property>
+        <!-- hibernate 默认会使用bean的校验功能，如果在配置文件中添加下面这样的配置就是告诉hibernate 我不适用bean校验功能，当然hibernate就不会初始化检验工厂类了，也就不会报错了！ -->
+        <property name="javax.persistence.validation.mode">none</property>
+        <mapping resource="com/ptl/entity/user/User.hbm.xml"/>
+
+    </session-factory>
+
+</hibernate-configuration>
