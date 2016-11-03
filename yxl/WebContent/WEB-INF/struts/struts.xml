@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="false" />
+	<!-- 在struts.xml文件中告诉spring的配置文件去创建action对象 -->
+	<constant name="struts.objectFactory" value="spring"/>
+	<constant name="struts.objectFactory.spring.autoWire" value="type"></constant>
+	
+	<!-- <package name="default" namespace="/module" extends="struts-default">
+	   <action name="hello" class="helloAction">
+	     <result>/success.jsp</result>
+	   </action>
+	</package> -->
+	<package name="module" namespace="/module" extends="struts-default">
+	  <action name="module" class="com.ptl.yxl.action.ModuleAction" method="getAllModules">
+	     <result>
+	        /index.jsp
+	     </result>
+	  </action>
+	</package>
+	
+	<package name="suite" namespace="/suite" extends="struts-default">
+	    <action name="suite" class="com.ptl.yxl.action.SuiteAction" method="getSuites">
+	       <result>/suite.jsp</result>
+	    </action>
+	    <action name="suiteInfo" class="com.ptl.yxl.action.SuiteAction" method="getSuiteInfo">
+	        <result>/suite_info.jsp</result>
+	    </action>
+	</package>
+	
+	<package name="question"  namespace="/question" extends="struts-default">
+	    <action name="question" class="com.ptl.yxl.action.QuestionAction" method="getQuestionsBySuiteCode">
+	       <result>/question.jsp</result>
+	    </action>
+	</package>
+	
+	<package name="result" namespace="/result" extends="">
+	    <action name="result" class="comc.ptl.yxl.action.ResultAction" method="SubmitUserData">
+	        <result type="json"></result>
+	    </action>
+	</package>
+</struts>

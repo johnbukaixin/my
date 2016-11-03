@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+        <!-- 开启注解扫描 -->
+   <context:component-scan base-package="com.ptl.yxl"></context:component-scan>
+    
+    <!-- 加载数据库 -->   
+   <context:property-placeholder location="classpath:jdbc.properties"/>
+   
+   <!-- c3p0数据库连接池 -->
+   <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+     <property name="driverClass" value="${jdbc.driver}"></property>
+     <property name="jdbcUrl" value="${jdbc.url}"></property>
+     <property name="user" value="${jdbc.user}"></property>
+     <property name="password" value="${jdbc.password}"></property>
+     
+     <property name="maxPoolSize" value="${pool.maxPoolSize}"></property>
+     <property name="minPoolSize" value="${pool.minPoolSize}"></property>
+     <property name="initialPoolSize" value="${pool.initialPoolSize}"></property>
+   </bean>
+   
+   <!--sessionFactory里需要配置数据源，hibernate基础信息配置：方言，显示sql，sql显示格式等，实体类映射文件、注解  -->
+   
+   <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+     <property name="dataSource" ref="dataSource"></property>
+    
+     <property name="hibernateProperties">
+        <props>
+          <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+          <prop key="hibernate.show_sql">true</prop>
+          <prop key="hibernate.format_sql">true</prop>
+        </props>
+     </property>
+   
+     <property name="annotatedClasses">
+        <list>
+           <value>com.ptl.yxl.pojo.Module</value>
+           <value>com.ptl.yxl.pojo.Suite</value>
+           <value>com.ptl.yxl.pojo.Question</value>
+           <value>com.ptl.yxl.pojo.Option</value>
+        </list>
+     </property>
+   </bean>
+</beans>
