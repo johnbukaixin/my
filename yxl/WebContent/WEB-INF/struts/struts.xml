@@ -38,9 +38,14 @@
 	    </action>
 	</package>
 	
-	<package name="result" namespace="/result" extends="">
-	    <action name="result" class="comc.ptl.yxl.action.ResultAction" method="SubmitUserData">
-	        <result type="json"></result>
+	<package name="result" namespace="/result" extends="json-default">
+	    <action name="result" class="com.ptl.yxl.action.ResultAction" method="submitUserData">
+	        <result type="json">
+	           <param name="root">message</param>
+	        </result>
+	    </action>
+	    <action name="response" class="com.ptl.yxl.action.ResultAction" method="getMyResult">
+	        <result>/result.jsp</result>
 	    </action>
 	</package>
 </struts>

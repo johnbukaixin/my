@@ -43,6 +43,7 @@
            <value>com.ptl.yxl.pojo.Suite</value>
            <value>com.ptl.yxl.pojo.Question</value>
            <value>com.ptl.yxl.pojo.Option</value>
+           <value>com.ptl.yxl.pojo.TestRecord</value>
         </list>
      </property>
    </bean>

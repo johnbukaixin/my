@@ -147,7 +147,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <p class="i_top"></p>
                 <p class="i_mid">
 				<span class="sels">
-					<input type="radio" name="question-${status.index+1 }" value="${option.optionCode}">
+					<input type="radio" name="optionIds[${status.index }]" value="${option.optionId}">
 				</span>${option.title}</p>
                 <p class="i_bot"></p>
             </div>
